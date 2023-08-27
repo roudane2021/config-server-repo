@@ -1,0 +1,13 @@
+
+
+# Configurations H2
+spring:
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+#Config
+configs:
+  maxProduits: 1
