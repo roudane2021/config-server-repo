@@ -10,4 +10,4 @@ spring:
 
 #Config
 configs:
-  maxProduits: 1
+  maxProduits: 2
