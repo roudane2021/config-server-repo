@@ -6,8 +6,3 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
 
-spring:
-  cloud:
-    config:
-      import-check:
-        enabled: false
