@@ -9,7 +9,7 @@ spring:
         registration:
           gateway:
             provider: my-provider
-            client-id: ecommerce
+            client-id: ecommerced
             client-secret: 65c9ffd2-6aaf-4a1a-9c71-a41bf834030a
             authorization-grant-type: authorization_code
             redirect-uri: "http://localhost:9104/auth"
