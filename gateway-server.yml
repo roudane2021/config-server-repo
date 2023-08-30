@@ -1,5 +1,5 @@
 server:
-  port: 9104
+  port: 9105
 spring:
   application:
     name: gateway-server
