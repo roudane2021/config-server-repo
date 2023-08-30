@@ -3,6 +3,21 @@ server:
 spring:
   application:
     name: gateway-server
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: my-provider
+            client-id: ecommerce
+            client-secret: 65c9ffd2-6aaf-4a1a-9c71-a41bf834030a
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://backend-gateway-client:9104/login/oauth2/code/{registrationId}"
+            scope: openid, message.read
+        provider:
+          my-provider:
+            issuer-uri: http://localhost:9696/auth/realms/ecommerce
+
     
 eureka:
   client:
