@@ -2,10 +2,14 @@
 
 # Configurations H2
 spring:
+  application.name: microservice-produits
+  # the current backend is configured to be used as a resource server
+  # then, I must indicate the URI of the backend-auth to be used and which token to be used
   security:
-    resourceserver:
-      jwt:
-        issuer-uri: http://localhost:9696/auth/realms/ecommerce
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://backend-keycloak-auth:8080/auth/realms/my_realm
   jpa:
     show-sql: true
   h2:
