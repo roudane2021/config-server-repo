@@ -10,6 +10,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:9696/auth/realms/ecommerce
+          jwks_uri: http://localhost:9696/auth/realms/ecommerce/protocol/openid-connect/certs
   jpa:
     show-sql: true
   h2:
