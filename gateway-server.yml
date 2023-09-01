@@ -3,10 +3,7 @@ server:
 spring:
   application:
     name: gateway-server
-  security:
-    resourceserver:
-      jwt:
-        issuer-uri: http://localhost:9696/auth/realms/ecommerce
+
 
 
 eureka:
