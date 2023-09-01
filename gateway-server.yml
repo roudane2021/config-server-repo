@@ -4,21 +4,11 @@ spring:
   application:
     name: gateway-server
   security:
-    oauth2:
-      client:
-        registration:
-          gateway:
-            provider: keyclock-provider
-            client-id: ecommerce
-            client-secret: 65c9ffd2-6aaf-4a1a-9c71-a41bf834030a
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keyclock"
-            #scope: openid, message.read
-        provider:
-          keyclock-provider:
-            issuer-uri: http://localhost:9696/auth/realms/ecommerce
+    resourceserver:
+      jwt:
+        issuer-uri: http://localhost:9696/auth/realms/ecommerce
 
-    
+
 eureka:
   client:
     serviceUrl:
