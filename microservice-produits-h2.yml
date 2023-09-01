@@ -9,7 +9,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://backend-keycloak-auth:8080/auth/realms/my_realm
+          issuer-uri: http://localhost:9696/auth/realms/ecommerce
   jpa:
     show-sql: true
   h2:
