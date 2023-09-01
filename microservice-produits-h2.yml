@@ -2,10 +2,11 @@
 
 # Configurations H2
 spring:
-  security:
-    oauth2:
-      resourceserver: http://localhost:9696/auth/realms/ecommerce
-
+  application:
+    security:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9696/auth/realms/ecommerce
   jpa:
     show-sql: true
   h2:
