@@ -3,6 +3,24 @@ server:
 spring:
   application:
     name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: commandeModule
+          uri: lb://microservice-commandes
+          predicates:
+            - Path=/commandes/**
+
+        - id: produitModule
+          uri: lb://microservice-produits
+          predicates:
+            - Path=/produits/**
+
+        - id: paiements
+          uri: lb://microservice-paiements
+          predicates:
+            - Path=/paiements/**
+
 
 
 
