@@ -24,7 +24,7 @@ spring:
         - id: produitModule
           uri: lb://microservice-produits
           predicates:
-            - Path=/produits/**
+            - Path=/produitsz/**
 
         - id: paiements
           uri: lb://microservice-paiements
