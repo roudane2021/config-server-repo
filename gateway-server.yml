@@ -5,6 +5,16 @@ spring:
     name: gateway-server
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://loca*****:****"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
       routes:
         - id: commandeModule
           uri: lb://microservice-commandes
